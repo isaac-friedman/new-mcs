@@ -2,8 +2,38 @@
 	font-family: "Helvetica", "Arial", sans-serif;
 }
 
+nav {
+	line-height: 100px;
+	width: 100%;
+	height: 100px;
+	background-color: #efe88e;
+}
+
+nav ul {
+	display: inline-block;
+	list-style:none;
+}
+
+nav li {
+	float: left;
+}
+
+nav a {
+	margin-right: 60px;
+	padding: 6px 3px;
+	background-color: #EFE777;
+	color:#313131;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+nav a:hover:not(#logo) {
+	background-color: #ffffff;
+	color: #000000;
+}
+
 main {
-	/*margin-bottom by footere height*/
+	/*margin-bottom by footer height*/
 	margin-bottom: 60px;
 }
 
@@ -19,4 +49,11 @@ footer{
 	/*color: #ffffff;*/
 	/*Setting line-height to container height vertically centers text.*/
 	line-height: 60px;
+	text-decoration: bold;
+}
+
+#logo {
+	float: left;
+	max-height: 85%;
+	padding-left: 10px;
 }
