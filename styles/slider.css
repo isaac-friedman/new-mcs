@@ -10,8 +10,6 @@
   height: 190px;
   width: 900px;
   background-color: #ccc;
-  transition: margin-left 1s ease;
-  transition-delay: 10s;
 }
 
 .slide-container:hover {
@@ -31,19 +29,25 @@
 }
 
 @keyframes slide {
-
   0% {
     transform: translateX(0px);
   }
 
+  10%,20%,30% {
+    transform: translateX(0px);
+  }
   33.3% {
+  /*  transition: transform 1s ease 10s;*/
     transform: translateX(-290px);
   }
-
+  40%,50%,60%,62% {
+    transform: translateX(-290px);
+  }
   66% {
     transform: translateX(-580px);
   }
   100% {
     transform: translateX(-580px);
   }
+
 }
