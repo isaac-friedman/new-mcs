@@ -67,6 +67,9 @@ nav ul li ul li {
   width: 100%;
 }
 
+.donate-btn {
+  float: right;
+}
 #logo {
 	float: left;
 	margin-right: 5px;
