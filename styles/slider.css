@@ -1,14 +1,15 @@
 .slideshow {
   background-color: #ccc;
-  width: 285px;
-  height: 190px;
+  width: 768px;
+  height: 512px;
   margin:0 auto;
+  margin-top: 5px;
   overflow:hidden;
 }
 
 .slide-container {
-  height: 190px;
-  width: 900px;
+  height: 512px;
+  width: 2316px; /*slide width + padding * number of slides*/
   background-color: #ccc;
 }
 
@@ -19,12 +20,13 @@
 .slide {
   position: relative;
   display: inline-block;
-  animation: slide 30s ease infinite;
+  animation: slide 14s ease infinite;
 }
 
 .slider-image {
+  padding:0;
   height: auto;
-  width: 285px;
+  width: 768px;
   display: inline;
 }
 
@@ -37,17 +39,16 @@
     transform: translateX(0px);
   }
   33.3% {
-  /*  transition: transform 1s ease 10s;*/
-    transform: translateX(-290px);
+    transform: translateX(-772px);
   }
   40%,50%,60%,62% {
-    transform: translateX(-290px);
+    transform: translateX(-772px);
   }
   66% {
-    transform: translateX(-580px);
+    transform: translateX(-1544px);
   }
   100% {
-    transform: translateX(-580px);
+    transform: translateX(-1544px);
   }
 
 }
