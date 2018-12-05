@@ -1,4 +1,5 @@
 * {
+
 	font-family: "Helvetica", "Arial", sans-serif;
 }
 
@@ -22,9 +23,10 @@ footer{
 	text-decoration: bold;
 }
 
-#logo {
-	float: left;
-	margin-right: 5px;
-	margin-top: 3px;
-	padding-left: 10px;
+.sign-board {
+	width: 60%;
+	margin:auto;
+}
+.sign-board > h1 {
+	text-align: center;
 }

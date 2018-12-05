@@ -39,7 +39,6 @@
     transform: translateX(0px);
   }
   33.3% {
-  /*  transition: transform 1s ease 10s;*/
     transform: translateX(-772px);
   }
   40%,50%,60%,62% {
