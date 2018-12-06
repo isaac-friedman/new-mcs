@@ -1,5 +1,4 @@
 * {
-
 	font-family: "Helvetica", "Arial", sans-serif;
 }
 
@@ -14,12 +13,13 @@ footer{
 	position: absolute;
 	width: 100%;
 	text-align: center;
+	left: 0px;
+	right: 0px;
 	bottom: 0px;
 	height:60px;
-	background-color: #e0e0e0;
-	/*color: #ffffff;*/
 	/*Setting line-height to container height vertically centers text.*/
 	line-height: 60px;
+	background-color: #e0e0e0;
 	text-decoration: bold;
 }
 
