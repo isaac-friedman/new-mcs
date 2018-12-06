@@ -8,6 +8,8 @@ nav a {
 
 nav {
 	width: 100%;
+  left: 0px;
+  right: 0px;
 	height: 100px;
 	background-color: #efe88e;
 }
