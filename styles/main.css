@@ -4,6 +4,11 @@
 	margin: 0;
 }
 
+body {
+	display: grid;
+	grid-layout: 100px 1fr 60px / 1fr;
+}
+
 /***
 *Specify nav tag throughout to avoid accidentally selecting elements in the
 *main content area.
