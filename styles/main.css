@@ -193,5 +193,7 @@ footer{
 /*mobile navbar*/
 @media (max-width:600px) {
 	#logo {
-		visibility: hidden;
+		display: none;
 	}
+
+}
