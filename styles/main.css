@@ -219,6 +219,10 @@ footer{
 		height: 10px;
 		border-top: 2px solid #eee;
 	}
+	nav > .nav-btn:hover {
+		background-color: #fff;
+	}/*debugging code*/
+
 	nav > .main-nav-list {
 		position: absolute;
 		display: block;
@@ -229,7 +233,7 @@ footer{
 		top: 50px;
 		left: 0px;
 	}
-	nav > .main-nav-list > a {
+	nav > .main-nav-list > li {
 		display: block;
 		width: 100%;
 	}
@@ -238,6 +242,7 @@ footer{
 	}
 	nav > #nav-check:checked + .main-nav-list {
 		height: calc(100vh - 50px);
+		display: block;
 		overflow-y: auto;
 	}
 }
