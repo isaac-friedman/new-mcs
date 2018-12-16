@@ -28,6 +28,7 @@ header {
 *Specify nav tag throughout to avoid accidentally selecting elements in the
 *main content area.
 ***/
+
 nav a {
   text-decoration: none;
 }
@@ -86,7 +87,6 @@ nav ul li ul {
 nav ul li:hover > ul,
 ul li ul:hover {
   visibility: visible;
-  : 1;
   display: block;
 }
 
@@ -188,6 +188,13 @@ footer{
 }
 .sign-board > h1 {
 	text-align: center;
+}
+
+/*hide mobile nav in desktop mode*/
+@media(min-width:601px) {
+	.nav-btn {
+		display: none;
+	}
 }
 
 /*mobile navbar*/
