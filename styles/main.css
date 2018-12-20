@@ -195,5 +195,14 @@ footer{
 
 /*mobile navbar*/
 @media (max-width:600px) {
-
+	.slideshow {
+		display: none;
+	}
+	.sign-board {
+		width: 100%;
+		margin:auto;
+	}
+	.sign-board > h1 {
+		text-align: center;
+	}
 }
