@@ -195,54 +195,5 @@ footer{
 
 /*mobile navbar*/
 @media (max-width:600px) {
-	#logo {
-		display: none;
-	}
 
-	.donate-btn {
-		margin-top: 15px;
-	}
-
-	nav > .nav-btn {
-    display: inline;
-    position: absolute;
-    left: 0px;
-    top: 10px;
-  }
-	nav > .nav-btn > label {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    padding: 13px;
-  }
-
-	nav > .nav-btn > label > span {
-		display: block;
-		width: 25px;
-		height: 10px;
-		border-top: 2px solid #eee;
-	}
-
-	nav > .main-nav-list {
-		position: absolute;
-		display: block;
-		width: 100%;
-		height: 0px;
-		transition: all 0.3s ease-in;
-		overflow-y: hidden;
-		top: 50px;
-		left: 0px;
-	}
-	nav > .main-nav-list > li {
-		display: block;
-		width: 100%;
-	}
-	nav > #nav-check:not(:checked) + .main-nav-list {
-		height: 0px;
-	}
-	nav > #nav-check:checked + .main-nav-list {
-		height: calc(100vh - 50px);
-		display: block;
-		overflow-y: auto;
-	}
 }
