@@ -15,7 +15,7 @@ body {
 	color: #8C7A6B;
 	display: grid;
 	gap: 0;
-	grid-template: auto 1fr auto / 1fr;
+	grid-template: auto 1fr 60px / 1fr;
 	grid-template-areas:
 		"hd"
 		"main"
@@ -32,6 +32,7 @@ header {
 
 nav a {
   text-decoration: none;
+	font-weight: bold;
 }
 
 nav {
@@ -195,14 +196,84 @@ footer{
 
 /*mobile navbar*/
 @media (max-width:600px) {
+	#logo {
+		display: none;
+	}
+
 	.slideshow {
 		display: none;
 	}
+
 	.sign-board {
 		width: 100%;
 		margin:auto;
 	}
+
 	.sign-board > h1 {
 		text-align: center;
 	}
+
+	nav a {
+	  font-weight: bold;;
+	}
+
+	nav {
+		width: 100%;
+		margin-left: 0px;
+		margin-right: 0px;
+		height: 100px;
+		background-color: #fff;
+	}
+
+	nav ul {
+	  background: #efe88e;
+		margin: 0;
+		list-style: unset;
+		padding: 0;
+	}
+
+	.main-nav-list {
+	  padding: 0px;
+	}
+
+	nav li {
+	  background: #fff;
+		padding: .25em;
+		display: block;
+		float: left;
+	  transition-duration: 0.5s;
+	}
+
+	nav li:hover {
+		background: red;
+		cursor: pointer;
+	}
+
+	nav ul li ul {
+		background: orange;
+		visibility: hidden;
+		z-index: 1;
+	  min-width: 5em;
+		position: absolute;
+	  transition: all 0.5s ease;
+	  margin-top: 1em;
+		left: 0;
+	  display: none;
+	}
+
+	nav ul li:hover > ul,
+	ul li ul:hover {
+	  visibility: visible;
+	  display: block;
+	}
+
+	nav ul li ul li {
+		clear: both;
+	  width: 100%;
+	}
+
+	.donate-btn {
+	  float: right;
+	}
+
 }
