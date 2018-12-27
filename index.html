@@ -6,15 +6,13 @@
 	<title>
 		Welcome to the New Millinery Center Synagogue
 	</title>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
+
   <header>
 		<nav role = "navigation">
-			<div class="nav-btn">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
+			<button class="nav-btn">Menu</button>
 			<a id="logo" href="index.html"><img src="img/color-logo-thumbnail.png" alt="MCS logo" /></a>
 			<ul class="main-nav-list">
 				<li><a href="#">Who We Are</a>
@@ -55,4 +53,9 @@
 	</main>
 	<footer>(c) 2018 by Isaac Friedman Consulting LLC</footer>
 </body>
+<script type="text/javascript">
+	$('.nav-btn').on('click', function() {
+		$('.main-nav-list').toggle();
+	});
+</script>
 </html>

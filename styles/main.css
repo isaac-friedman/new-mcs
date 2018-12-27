@@ -223,14 +223,32 @@ footer{
 		background-color: #fff;
 	}
 
-	nav ul {
+	.nav-btn {
+		display: inline-block;
+		height: 50px;
+		width: 50px;
+		margin-top: 5px;
+		margin-left: 5px;
+	}
+
+	.nav-btn > span {
+		padding-top: 10px;
+		display: block;
+		width: 50px;
+		height 12px;
+		border-top: 2px solid black;
+	}
+
+	.main-nav-list {
+		display: none;
 		padding-top: 5px;
 		padding-left: 5px;
 		padding-right: 5px;
 	}
+
 	nav li {
 		background: linear-gradient(#ada996, #f2f2f2, #dbdbdb, #eaeaea);
-		border-bottom: 1px solid grey;
+		/*border-bottom: 1px solid grey;*/
 	}
 
 	nav a {
@@ -238,6 +256,7 @@ footer{
 		text-decoration: none;
 		text-align: center;
 	}
+
 
 	.donate-btn {
 		/*temporary until the show nav button works*/
