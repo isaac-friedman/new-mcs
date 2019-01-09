@@ -164,6 +164,7 @@ header {
 
 main {
 	/*margin-bottom by footer height*/
+	color: #000;
 	margin-bottom: 60px;
 	grid-area: main;
 }
