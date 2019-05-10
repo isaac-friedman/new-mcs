@@ -12,10 +12,9 @@ html {
 body {
 	width: 100%;
 	height: 100%;
-	color: #8C7A6B;
 	display: grid;
 	gap: 0;
-	grid-template: auto 1fr 60px / 1fr;
+	grid-template: auto 1fr auto / 1fr;
 	grid-template-areas:
 		"hd"
 		"main"
@@ -25,74 +24,75 @@ body {
 header {
 	grid-area: hd;
 }
+/***
+*Specify nav tag throughout to avoid accidentally selecting elements in the
+*main content area.
+***/
+nav a {
+  text-decoration: none;
+}
 
-@media(min-width:601px) {
-	/***
-	*Specify nav tag throughout to avoid accidentally selecting elements in the
-	*main content area.
-	***/
+nav {
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	height: 100px;
+	background-color: #efe88e;
+}
 
-	nav a {
-	  text-decoration: none;
-		font-weight: bold;
-	}
+nav ul {
+  background: #efe88e;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
 
-	nav {
-		width: 100%;
-		margin-left: 0px;
-		margin-right: 0px;
-		height: 100px;
-		background-color: #efe88e;
-	}
+.main-nav-list {
+  padding-top: 50px;
+}
 
-	nav ul {
-	  background: #efe88e;
-		list-style: none;
-		margin: 0;
-		padding-left: 0;
-	}
+nav li {
+	color: #fff;
+  background: #efe88e;
+	display: block;
+	float: left;
+	padding: 1em;
+	position: relative;
+	text-decoration: none;
+  transition-duration: 0.5s;
+}
 
-	.main-nav-list {
-	  padding-top: 50px;
-	}
+nav li a {
+  color: #fff;
+}
 
-	nav li {
-	  background: #efe88e;
-		display: block;
-		float: left;
-		padding: 1em;
-		position: relative;
-		text-decoration: none;
-	  transition-duration: 0.5s;
-	}
+nav li:hover {
+	background: red;
+	cursor: pointer;
+}
 
-	nav li:hover {
-		background: red;
-		cursor: pointer;
-	}
+nav ul li ul {
+	background: orange;
+	visibility: hidden;
+	z-index: 1;
+  min-width: 5em;
+	position: absolute;
+  transition: all 0.5s ease;
+  margin-top: 1em;
+	left: 0;
+  display: none;
+}
 
-	nav ul li ul {
-		background: orange;
-		visibility: hidden;
-		z-index: 1;
-	  min-width: 5em;
-		position: absolute;
-	  transition: all 0.5s ease;
-	  margin-top: 1em;
-		left: 0;
-	  display: none;
-	}
+nav ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  : 1;
+  display: block;
+}
 
-	nav ul li:hover > ul,
-	ul li ul:hover {
-	  visibility: visible;
-	  display: block;
-	}
-
-	nav ul li ul li {
-		clear: both;
-	  width: 100%;
-	}
+nav ul li ul li {
+	clear: both;
+  width: 100%;
 }
 
 .donate-btn {
@@ -164,37 +164,30 @@ header {
 
 main {
 	/*margin-bottom by footer height*/
-	color: #000;
-	margin-bottom: 60px;
+	width: 60%;
+	margin: 0px auto 60px auto;
 	grid-area: main;
 }
-#memorial {
-	background-color: brown;
-	padding: 10px;
-	font-family: Times, serif;
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-	grid-gap: 10px;
-}
-.plaque {
-	height: 90px;
-	/*width: 500px;*/
-	border-radius: 3px;
-	text-align: center;
+
+.image-cropper {
+	margin: 15px auto;
+	height: 200px;
+	width: 200px;
+	position: relative;
 	overflow: hidden;
-	/*background-color: #FFD700;*/
-	background-color: hsl(65,100%,68%);
-}
-.name {
-	font-size: 3em;
-	font-weight: 650;
+	border-radius: 50%;
 }
 
-.date {
+.headshot-container {
+	margin: 15px auto;
+	height: 200px;
+	width: 200px;
 	position: relative;
-	font-size: 2em;
-	font-weight: 650;
-	bottom: 5px;
+	overflow: hidden;
+}
+
+.headshot {
+	margin-left: -25%;
 }
 
 footer{
@@ -219,78 +212,8 @@ footer{
 	text-align: center;
 }
 
-/*hide mobile nav in desktop mode*/
-@media(min-width:601px) {
-	.nav-btn {
-		display: none;
-	}
-}
-
 /*mobile navbar*/
 @media (max-width:600px) {
 	#logo {
-		display: none;
+		visibility: hidden;
 	}
-
-	.slideshow {
-		display: none;
-	}
-
-	.sign-board {
-		width: 100%;
-		margin:auto;
-	}
-
-	.sign-board > h1 {
-		text-align: center;
-	}
-
-	nav {
-		width: 100%;
-		margin-left: 0px;
-		margin-right: 0px;
-		background-color: #fff;
-	}
-
-	.nav-btn {
-		display: inline-block;
-		height: 50px;
-		width: 50px;
-		margin-top: 5px;
-		margin-left: 5px;
-	}
-
-	.nav-btn > span {
-		padding-top: 10px;
-		display: block;
-		width: 50px;
-		height 12px;
-		border-top: 2px solid black;
-	}
-
-	.main-nav-list {
-		display: none;
-		padding-top: 5px;
-		padding-left: 5px;
-		padding-right: 5px;
-	}
-
-	nav li {
-		background: linear-gradient(#ada996, #f2f2f2, #dbdbdb, #eaeaea);
-		/*border-bottom: 1px solid grey;*/
-	}
-
-	nav a {
-	  font-weight: bold;
-		text-decoration: none;
-		text-align: center;
-	}
-
-
-	.donate-btn {
-		/*temporary until the show nav button works*/
-		display: none;
-	  float: right;
-	}
-
-}
