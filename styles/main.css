@@ -164,8 +164,23 @@ nav ul li ul li {
 
 main {
 	/*margin-bottom by footer height*/
-	margin-bottom: 60px;
+	width: 60%;
+	margin: 0px auto 60px auto;
 	grid-area: main;
+}
+
+.image-cropper {
+	margin: 15px auto;
+	height: 200px;
+	width: 200px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+.headshot {
+
+	margin-left: -25%;
 }
 
 footer{
