@@ -217,3 +217,10 @@ footer{
 	#logo {
 		visibility: hidden;
 	}
+}
+
+@media (min-width:601px) {
+	.nav-btn {
+		display: none;
+	}
+}
