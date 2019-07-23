@@ -1,50 +1,50 @@
 * {
-	font-family: "Helvetica", "Arial", sans-serif;
-	padding: 0;
-	margin: 0;
+    font-family: "Helvetica", "Arial", sans-serif;
+    padding: 0;
+    margin: 0;
 }
 
 html {
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 body {
-	width: 100%;
-	height: 100%;
-	display: grid;
-	gap: 0;
-	grid-template: auto 1fr auto / 1fr;
-	grid-template-areas:
-		"hd"
-		"main"
-		"ft";
+    width: 100%;
+    height: 100%;
+    display: grid;
+    gap: 0;
+    grid-template: auto 1fr auto / 1fr;
+    grid-template-areas:
+    "hd"
+    "main"
+    "ft";
 }
 
 header {
-	grid-area: hd;
+    grid-area: hd;
 }
 /***
 *Specify nav tag throughout to avoid accidentally selecting elements in the
 *main content area.
 ***/
 nav a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 nav {
-	width: 100%;
-	margin-left: 0px;
-	margin-right: 0px;
-	height: 100px;
-	background-color: #efe88e;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    height: 100px;
+    background-color: #efe88e;
 }
 
 nav ul {
-  background: #efe88e;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
+    background: #efe88e;
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
 }
 
 .main-nav-list {
@@ -52,14 +52,14 @@ nav ul {
 }
 
 nav li {
-	color: #fff;
-  background: #efe88e;
-	display: block;
-	float: left;
-	padding: 1em;
-	position: relative;
-	text-decoration: none;
-  transition-duration: 0.5s;
+    color: #fff;
+    background: #efe88e;
+    display: block;
+    float: left;
+    padding: 1em;
+    position: relative;
+    text-decoration: none;
+    transition-duration: 0.5s;
 }
 
 nav li a {
@@ -67,20 +67,20 @@ nav li a {
 }
 
 nav li:hover {
-	background: red;
-	cursor: pointer;
+    background: red;
+    cursor: pointer;
 }
 
 nav ul li ul {
-	background: orange;
-	visibility: hidden;
-	z-index: 1;
-  min-width: 5em;
-	position: absolute;
-  transition: all 0.5s ease;
-  margin-top: 1em;
-	left: 0;
-  display: none;
+    background: orange;
+    visibility: hidden;
+    z-index: 1;
+    min-width: 5em;
+    position: absolute;
+    transition: all 0.5s ease;
+    margin-top: 1em;
+    left: 0;
+    display: none;
 }
 
 nav ul li:hover > ul,
@@ -91,7 +91,7 @@ ul li ul:hover {
 }
 
 nav ul li ul li {
-	clear: both;
+    clear: both;
   width: 100%;
 }
 
@@ -101,10 +101,10 @@ nav ul li ul li {
 
 #logo {
   background-color: #efe88e;
-	float: left;
-	margin-right: 5px;
-	margin-top: 3px;
-	padding-left: 10px;
+    float: left;
+    margin-right: 5px;
+    margin-top: 3px;
+    padding-left: 10px;
 }
 
 .slideshow {
@@ -163,64 +163,64 @@ nav ul li ul li {
 }
 
 main {
-	/*margin-bottom by footer height*/
-	width: 60%;
-	margin: 0px auto 60px auto;
-	grid-area: main;
+    /*margin-bottom by footer height*/
+    width: 60%;
+    margin: 0px auto 60px auto;
+    grid-area: main;
 }
 
 .image-cropper {
-	margin: 15px auto;
-	height: 200px;
-	width: 200px;
-	position: relative;
-	overflow: hidden;
-	border-radius: 50%;
+    margin: 15px auto;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
 }
 
 .headshot-container {
-	margin: 15px auto;
-	height: 200px;
-	width: 200px;
-	position: relative;
-	overflow: hidden;
+    margin: 15px auto;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    overflow: hidden;
 }
 
 .headshot {
-	margin-left: -25%;
+    margin-left: -25%;
 }
 
 footer{
-	/*sticky footer that stays at the bottom of the window but doesn't cover
-	main content*/
-	grid-area: ft
-	position: absolute;
-	width: 100%;
-	text-align: center;
-	height:60px;
-	/*Setting line-height to container height vertically centers text.*/
-	line-height: 60px;
-	background-color: #e0e0e0;
-	text-decoration: bold;
+    /*sticky footer that stays at the bottom of the window but doesn't cover
+    main content*/
+    grid-area: ft
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    height:60px;
+    /*Setting line-height to container height vertically centers text.*/
+    line-height: 60px;
+    background-color: #e0e0e0;
+    text-decoration: bold;
 }
 
 .sign-board {
-	width: 60%;
-	margin:auto;
+    width: 60%;
+    margin:auto;
 }
 .sign-board > h1 {
-	text-align: center;
+    text-align: center;
 }
 
 /*mobile navbar*/
 @media (max-width:600px) {
-	.hide-on-mobile {
-		display: none;
-	}
+    .hide-on-mobile {
+    display: none;
+    }
 }
 
 @media (min-width:601px) {
-	.nav-btn {
-		display: none;
-	}
+    .nav-btn {
+    display: none;
+    }
 }
