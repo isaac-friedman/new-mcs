@@ -95,6 +95,34 @@ nav ul li ul li {
   width: 100%;
 }
 
+#memorial {
+	background-color: brown;
+	width: 100%;
+	padding: 10px;
+	font-family: Times, serif;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(500px, 2fr));
+	grid-gap: 10px;
+}
+.plaque {
+	height: 120px;
+	border-radius: 3px;
+	text-align: center;
+	overflow: hidden;
+	background-color: hsl(65,100%,68%);
+}
+.name {
+	font-size: 3em;
+	font-weight: 650;
+}
+
+.date {
+	position: relative;
+	font-size: 2em;
+	font-weight: 650;
+	bottom: 5px;
+}
+
 .donate-btn {
   float: right;
 }
